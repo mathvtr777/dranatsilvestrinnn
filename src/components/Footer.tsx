@@ -1,4 +1,4 @@
-import { Instagram, MapPin, Phone, Mail } from "lucide-react";
+import { Instagram, Phone, Mail } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -24,8 +24,8 @@ const Footer = () => {
             <ul className="space-y-3 text-sm text-foreground/70">
               <li className="flex items-start gap-3">
                 <Phone size={14} className="text-gold mt-1" />
-                <a href="tel:+5500000000000" className="hover:text-gold transition-colors">
-                  (00) 00000-0000
+                <a href="https://wa.me/5551952039994" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">
+                  (51) 9520-3994
                 </a>
               </li>
               <li className="flex items-start gap-3">
@@ -34,10 +34,7 @@ const Footer = () => {
                   contato@dranatalia.com
                 </a>
               </li>
-              <li className="flex items-start gap-3">
-                <MapPin size={14} className="text-gold mt-1" />
-                <span>Endereço da clínica<br />Cidade — Estado</span>
-              </li>
+
             </ul>
           </div>
 
@@ -57,7 +54,9 @@ const Footer = () => {
               </li>
             </ul>
             <a
-              href="#contato"
+              href="https://wa.me/5551952039994"
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-8 inline-flex text-[11px] tracking-refined uppercase border border-foreground/40 px-5 py-3 hover:bg-foreground hover:text-background transition-all duration-500"
             >
               Agendar avaliação

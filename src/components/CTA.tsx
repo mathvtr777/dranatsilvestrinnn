@@ -26,7 +26,7 @@ const CTA = () => {
 
             <div className="mt-12 flex flex-wrap justify-center gap-4">
               <a
-                href="https://wa.me/5500000000000"
+                href="https://wa.me/5551952039994"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center justify-center px-10 py-5 bg-gold text-ink text-xs tracking-refined uppercase hover:bg-background transition-all duration-500 shadow-gold"
@@ -35,10 +35,12 @@ const CTA = () => {
                 <span className="ml-3 transition-transform duration-500 group-hover:translate-x-1">→</span>
               </a>
               <a
-                href="#resultados"
+                href="https://wa.me/5551952039994"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-10 py-5 border border-background/40 text-background text-xs tracking-refined uppercase hover:bg-background hover:text-ink transition-all duration-500"
               >
-                Conhecer resultados
+                Quero meu resultado
               </a>
             </div>
 

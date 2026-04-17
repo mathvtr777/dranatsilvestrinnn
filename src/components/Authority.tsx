@@ -44,10 +44,10 @@ const Authority = () => {
                 <span className="italic font-light">a sua essência.</span>
               </h2>
               <p className="mt-7 text-foreground/70 leading-relaxed">
-                Há anos dedicada à harmonização facial e corporal, a Dra. Natália Silvestrin combina
-                técnica refinada, olhar estético sensível e um cuidado verdadeiramente individualizado.
-                Cada paciente é recebida em um ambiente acolhedor, com escuta atenta e planejamento
-                exclusivo — porque excelência se constrói nos detalhes.
+                A Dra. Natália Silvestrin combina técnica refinada, olhar estético sensível e
+                um cuidado verdadeiramente individualizado. Cada paciente é recebida em um ambiente
+                acolhedor, com escuta atenta e planejamento exclusivo — porque excelência se constrói
+                nos detalhes.
               </p>
 
               <div className="mt-10 grid sm:grid-cols-2 gap-6">
