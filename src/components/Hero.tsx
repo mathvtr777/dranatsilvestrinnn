@@ -64,6 +64,17 @@ const Hero = () => {
               </div>
             </div>
           </div>
+
+          {/* Badge Protocolo Elite Prime */}
+          <div className="mt-8 animate-fade-up flex justify-center" style={{ animationDelay: "640ms" }}>
+            <div className="inline-flex items-center gap-3 border border-gold/50 bg-gold/5 px-6 py-3">
+              <span className="w-4 h-px bg-gold" />
+              <span className="text-[11px] tracking-luxe uppercase text-gold font-medium">
+                Protocolo Elite Prime · Canoas RS
+              </span>
+              <span className="w-4 h-px bg-gold" />
+            </div>
+          </div>
         </div>
       </div>
 
