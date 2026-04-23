@@ -1,61 +1,53 @@
 import Reveal from "./Reveal";
 
-const CTA = () => {
-  return (
-    <section id="contato" className="py-24 md:py-32 bg-ink text-background relative overflow-hidden">
-      <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-0 left-1/4 w-96 h-96 rounded-full bg-gold/30 blur-3xl animate-pulse-soft" />
-        <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] rounded-full bg-rose/20 blur-3xl animate-float-slow" />
-      </div>
+const CTA = () => (
+  <section id="contato" className="py-24 md:py-32 bg-background-alt relative overflow-hidden">
+    <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full pointer-events-none" style={{ background: "radial-gradient(circle, hsl(330 35% 88% / 0.5) 0%, transparent 70%)" }} />
+    <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full pointer-events-none" style={{ background: "radial-gradient(circle, hsl(270 30% 88% / 0.4) 0%, transparent 70%)" }} />
 
-      <div className="container mx-auto relative">
-        <Reveal>
-          <div className="max-w-3xl mx-auto text-center">
-            <span className="gold-divider text-[11px] tracking-luxe uppercase text-gold-soft">
-              Sua avaliação exclusiva
-            </span>
-            <h2 className="mt-6 font-serif-display text-4xl md:text-6xl lg:text-7xl text-background leading-[1.05]">
-              Viva uma experiência
-              <br />
-              <span className="italic font-light text-gold-soft">premium em harmonização.</span>
-            </h2>
-            <p className="mt-7 text-background/70 leading-relaxed max-w-xl mx-auto">
-              Agende sua avaliação personalizada com a Dra. Natália Silvestrin e descubra o que torna
-              cada atendimento único — naturalidade, técnica e exclusividade em cada detalhe.
-            </p>
-
-            <div className="mt-12 flex flex-wrap justify-center gap-4">
-              <a
-                href="https://wa.me/5551952039994"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group inline-flex items-center justify-center px-10 py-5 bg-gold text-ink text-xs tracking-refined uppercase hover:bg-background transition-all duration-500 shadow-gold"
-              >
-                Agendar minha avaliação
-                <span className="ml-3 transition-transform duration-500 group-hover:translate-x-1">→</span>
-              </a>
-              <a
-                href="https://wa.me/5551952039994"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-10 py-5 border border-background/40 text-background text-xs tracking-refined uppercase hover:bg-background hover:text-ink transition-all duration-500"
-              >
-                Quero meu resultado
-              </a>
-            </div>
-
-            <div className="mt-12 flex flex-wrap items-center justify-center gap-x-10 gap-y-3 text-[11px] tracking-refined uppercase text-background/50">
-              <span>CRBM 5-13377</span>
-              <span className="w-1 h-1 rounded-full bg-background/30" />
-              <span>+2.000 atendimentos</span>
-              <span className="w-1 h-1 rounded-full bg-background/30" />
-              <span>Atendimento exclusivo</span>
-            </div>
+    <div className="container mx-auto relative z-10">
+      <Reveal>
+        <div className="max-w-3xl mx-auto text-center">
+          <div className="mauve-divider text-[10px] tracking-luxe uppercase text-mauve mb-8 justify-center flex">
+            Sua avaliação exclusiva
           </div>
-        </Reveal>
-      </div>
-    </section>
-  );
-};
+
+          <h2 className="font-serif-display text-5xl md:text-6xl lg:text-7xl text-foreground font-light">
+            Viva uma experiência
+            <br />
+            <em className="text-mauve">premium em harmonização.</em>
+          </h2>
+
+          <p className="mt-8 text-foreground/60 leading-relaxed font-light max-w-xl mx-auto">
+            Agende sua avaliação personalizada com a Dra. Natália Silvestrin e descubra o que torna
+            cada atendimento único — naturalidade, precisão clínica e exclusividade.
+          </p>
+
+          <div className="mt-14 flex flex-col sm:flex-row justify-center items-center gap-5">
+            <a href="https://wa.me/5551952039994" target="_blank" rel="noopener noreferrer"
+              className="group inline-flex items-center justify-center px-10 py-4 bg-mauve text-white text-[10px] tracking-luxe uppercase shadow-mauve font-medium w-full sm:w-auto hover:opacity-90 transition-opacity duration-300"
+              style={{ borderRadius: "2px" }}>
+              <span>Agendar minha avaliação</span>
+              <span className="ml-3 transition-transform duration-500 group-hover:translate-x-1">→</span>
+            </a>
+            <a href="https://wa.me/5551952039994" target="_blank" rel="noopener noreferrer"
+              className="group inline-flex items-center justify-center px-10 py-4 border border-mauve/30 text-mauve text-[10px] tracking-luxe uppercase hover:bg-mauve hover:text-white transition-all duration-500 w-full sm:w-auto font-medium"
+              style={{ borderRadius: "2px" }}>
+              Quero meu resultado
+            </a>
+          </div>
+
+          <div className="mt-14 pt-10 border-t border-border flex flex-wrap items-center justify-center gap-x-10 gap-y-3">
+            {["CRBM 5-13377", "+2.000 atendimentos", "Atendimento exclusivo"].map(item => (
+              <span key={item} className="flex items-center gap-2 text-[9px] tracking-luxe uppercase text-foreground/40">
+                <span className="w-1.5 h-1.5 rounded-full bg-mauve/40" />{item}
+              </span>
+            ))}
+          </div>
+        </div>
+      </Reveal>
+    </div>
+  </section>
+);
 
 export default CTA;

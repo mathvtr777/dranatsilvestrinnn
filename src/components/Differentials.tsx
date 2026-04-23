@@ -11,51 +11,35 @@ const items = [
   { icon: Sparkle, title: "Cuidado do início ao fim", desc: "Acompanhamento completo, da avaliação ao pós-procedimento." },
 ];
 
-const Differentials = () => {
-  return (
-    <section id="diferenciais" className="py-24 md:py-32 bg-background">
-      <div className="container mx-auto">
-        <Reveal>
-          <div className="text-center max-w-3xl mx-auto">
-            <span className="gold-divider text-[11px] tracking-luxe uppercase text-gold">
-              Diferenciais
-            </span>
-            <h2 className="mt-5 font-serif-display text-4xl md:text-5xl lg:text-6xl text-ink leading-[1.05]">
-              Uma experiência
-              <br />
-              <span className="italic font-light">verdadeiramente exclusiva.</span>
-            </h2>
-          </div>
-        </Reveal>
-
-        <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-border/60">
-          {items.slice(0, 4).map((it, i) => (
-            <Reveal key={it.title} delay={i * 90} variant="up">
-              <div className="bg-background p-8 md:p-10 h-full hover:bg-muted/40 transition-all duration-700 group relative overflow-hidden">
-                <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-700" />
-                <it.icon className="text-gold transition-all duration-700 group-hover:scale-125 group-hover:rotate-6" size={28} strokeWidth={1} />
-                <h3 className="mt-6 font-serif-display text-2xl text-ink transition-transform duration-500 group-hover:translate-x-1">{it.title}</h3>
-                <p className="mt-3 text-sm text-foreground/65 leading-relaxed">{it.desc}</p>
-              </div>
-            </Reveal>
-          ))}
+const Differentials = () => (
+  <section id="diferenciais" className="py-24 md:py-32 bg-background-alt">
+    <div className="container mx-auto">
+      <Reveal>
+        <div className="text-center max-w-3xl mx-auto mb-20">
+          <div className="mauve-divider text-[10px] tracking-luxe uppercase text-mauve mb-6">Diferenciais</div>
+          <h2 className="font-serif-display text-5xl md:text-6xl text-foreground font-light">
+            Uma experiência
+            <br />
+            <em className="text-mauve">verdadeiramente exclusiva.</em>
+          </h2>
         </div>
+      </Reveal>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border/60 mt-px">
-          {items.slice(4).map((it, i) => (
-            <Reveal key={it.title} delay={i * 90} variant="up">
-              <div className="bg-background p-8 md:p-10 h-full hover:bg-muted/40 transition-all duration-700 group relative overflow-hidden">
-                <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-700" />
-                <it.icon className="text-gold transition-all duration-700 group-hover:scale-125 group-hover:rotate-6" size={28} strokeWidth={1} />
-                <h3 className="mt-6 font-serif-display text-2xl text-ink transition-transform duration-500 group-hover:translate-x-1">{it.title}</h3>
-                <p className="mt-3 text-sm text-foreground/65 leading-relaxed">{it.desc}</p>
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+        {items.map((it, i) => (
+          <Reveal key={it.title} delay={i * 70} variant="up">
+            <div className="group bg-card p-7 shadow-soft hover:shadow-elegant hover:-translate-y-1 transition-all duration-500 h-full" style={{ borderRadius: "2px" }}>
+              <div className="w-10 h-10 rounded-full bg-mauve/10 flex items-center justify-center mb-5 group-hover:bg-mauve/20 transition-colors duration-300">
+                <it.icon className="text-mauve" size={18} strokeWidth={1.5} />
               </div>
-            </Reveal>
-          ))}
-        </div>
+              <h3 className="font-serif-display text-xl text-foreground font-light group-hover:text-mauve transition-colors duration-300">{it.title}</h3>
+              <p className="mt-3 text-sm text-foreground/55 leading-relaxed font-light">{it.desc}</p>
+            </div>
+          </Reveal>
+        ))}
       </div>
-    </section>
-  );
-};
+    </div>
+  </section>
+);
 
 export default Differentials;

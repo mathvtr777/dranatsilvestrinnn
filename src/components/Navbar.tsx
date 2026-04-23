@@ -13,78 +13,53 @@ const links = [
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
-
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
+    const fn = () => setScrolled(window.scrollY > 24);
+    window.addEventListener("scroll", fn);
+    return () => window.removeEventListener("scroll", fn);
   }, []);
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? "bg-background/85 backdrop-blur-md border-b border-border/60 py-3"
-          : "bg-transparent py-5"
-      }`}
-    >
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      scrolled ? "bg-background/90 backdrop-blur-xl border-b border-border py-4" : "bg-transparent py-6"
+    }`}>
       <div className="container mx-auto flex items-center justify-between">
         <a href="#top" className="flex flex-col leading-none">
-          <span className="font-serif-display text-xl md:text-2xl tracking-tight text-ink">
-            Natália Silvestrin
-          </span>
-          <span className="text-[10px] tracking-luxe uppercase text-gold mt-0.5">
-            Harmonização Facial & Corporal
-          </span>
+          <span className="font-serif-display text-xl md:text-2xl text-foreground font-light">Natália Silvestrin</span>
+          <span className="text-[8px] tracking-luxe uppercase text-mauve mt-0.5">Harmonização Facial & Corporal</span>
         </a>
 
-        <nav className="hidden lg:flex items-center gap-9">
+        <nav className="hidden lg:flex items-center gap-8">
           {links.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
-              className="text-xs tracking-refined uppercase text-foreground/70 hover:text-gold transition-colors duration-300"
-            >
+            <a key={l.href} href={l.href}
+              className="text-[10px] tracking-refined uppercase text-foreground/55 hover:text-mauve transition-colors duration-300 draw-underline">
               {l.label}
             </a>
           ))}
         </nav>
 
-        <a
-          href="#contato"
-          className="hidden lg:inline-flex items-center justify-center text-xs tracking-refined uppercase border border-foreground/80 px-5 py-3 text-foreground hover:bg-foreground hover:text-background transition-all duration-500"
-        >
-          Agendar avaliação
+        <a href="#contato"
+          className="hidden lg:inline-flex items-center text-[10px] tracking-luxe uppercase border border-mauve/40 px-6 py-2.5 text-mauve hover:bg-mauve hover:text-white transition-all duration-400 font-medium"
+          style={{ borderRadius: "2px" }}>
+          Agendar
         </a>
 
-        <button
-          onClick={() => setOpen(!open)}
-          className="lg:hidden text-foreground p-2"
-          aria-label="Menu"
-        >
-          {open ? <X size={22} /> : <Menu size={22} />}
+        <button onClick={() => setOpen(!open)} className="lg:hidden text-foreground/70 hover:text-mauve transition-colors p-1" aria-label="Menu">
+          {open ? <X size={22} strokeWidth={1.5} /> : <Menu size={22} strokeWidth={1.5} />}
         </button>
       </div>
 
-      {/* Mobile */}
       {open && (
-        <div className="lg:hidden bg-background border-t border-border animate-fade-in">
-          <div className="container mx-auto py-6 flex flex-col gap-5">
+        <div className="lg:hidden bg-background/95 backdrop-blur-xl border-t border-border animate-fade-in absolute top-full left-0 w-full shadow-elegant">
+          <div className="container mx-auto py-8 flex flex-col gap-6">
             {links.map((l) => (
-              <a
-                key={l.href}
-                href={l.href}
-                onClick={() => setOpen(false)}
-                className="text-sm tracking-refined uppercase text-foreground/80 hover:text-gold"
-              >
+              <a key={l.href} href={l.href} onClick={() => setOpen(false)}
+                className="text-[11px] tracking-refined uppercase text-foreground/60 hover:text-mauve transition-colors">
                 {l.label}
               </a>
             ))}
-            <a
-              href="#contato"
-              onClick={() => setOpen(false)}
-              className="mt-2 text-center text-xs tracking-refined uppercase border border-foreground/80 px-5 py-3 text-foreground"
-            >
+            <a href="#contato" onClick={() => setOpen(false)}
+              className="mt-2 text-center text-[10px] tracking-luxe uppercase bg-mauve py-4 text-white font-medium shadow-mauve">
               Agendar avaliação
             </a>
           </div>
@@ -93,5 +68,4 @@ const Navbar = () => {
     </header>
   );
 };
-
 export default Navbar;

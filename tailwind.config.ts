@@ -15,7 +15,7 @@ export default {
     extend: {
       fontFamily: {
         serif: ['"Cormorant Garamond"', 'serif'],
-        sans: ['Inter', 'sans-serif'],
+        sans: ['"DM Sans"', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -52,11 +52,7 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
         gold: "hsl(var(--gold))",
-        "gold-soft": "hsl(var(--gold-soft))",
-        rose: "hsl(var(--rose))",
-        nude: "hsl(var(--nude))",
-        champagne: "hsl(var(--champagne))",
-        "warm-grey": "hsl(var(--warm-grey))",
+        mauve: "hsl(var(--mauve))",
         ink: "hsl(var(--ink))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
