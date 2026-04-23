@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import EliteProtocol from "@/components/EliteProtocol";
 import Authority from "@/components/Authority";
 import Procedures from "@/components/Procedures";
 import Differentials from "@/components/Differentials";
@@ -14,6 +15,7 @@ const Index = () => (
   <main className="min-h-screen bg-background overflow-x-hidden">
     <Navbar />
     <Hero />
+    <EliteProtocol />
     <Authority />
     <Procedures />
     <Differentials />

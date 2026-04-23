@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        serif: ['"Cormorant Garamond"', 'serif'],
+        serif: ['"Raleway"', 'sans-serif'],
         sans: ['"DM Sans"', 'sans-serif'],
       },
       colors: {

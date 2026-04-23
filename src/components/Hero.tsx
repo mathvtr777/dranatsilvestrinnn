@@ -54,7 +54,7 @@ const Hero = () => (
             <span>Agendar avaliação</span>
             <span className="ml-3 transition-transform duration-500 group-hover:translate-x-1">→</span>
           </a>
-          <a href="#procedimentos"
+          <a href="#resultados"
             className="group inline-flex items-center justify-center px-10 py-4 border border-mauve/30 text-mauve text-[10px] tracking-luxe uppercase hover:bg-mauve hover:text-white transition-all duration-500 w-full sm:w-auto font-medium"
             style={{ borderRadius: "2px" }}>
             Ver procedimentos

@@ -1,65 +1,63 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@200;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@200;300;400;500&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /*
-  Dra. Natália Silvestrin — "Pastel Luxe"
-  Paleta: Blush + Lavanda + Champagne com texto Ameixa profundo
-  Referências: Glossier · Aesop · La Mer · Dior Beauty Light
+  Dra. Natália Silvestrin — "Marrom Nude"
+  Paleta: Nude quente + Marrom espresso + Caramelo
+  Referências: Bottega Veneta · ZARA Beauty · Augustinus Bader · Dr. Barbara Sturm
 */
 
 @layer base {
   :root {
-    /* ── Canvas pastel suave ── */
-    --background: 330 18% 97%;          /* Blush muito suave */
-    --background-alt: 270 15% 96%;      /* Lavanda muito suave */
-    --foreground: 285 22% 20%;          /* Ameixa profunda — elegante */
+    /* ── Canvas: nude quente, nunca branco frio ── */
+    --background: 30 20% 95%;          /* Nude areia */
+    --background-alt: 25 16% 91%;      /* Nude mais profundo */
+    --foreground: 22 35% 15%;          /* Espresso escuro */
 
     /* ── Superfícies ── */
-    --card: 0 0% 100%;
-    --card-foreground: 285 22% 20%;
+    --card: 35 22% 98%;                /* Quase-branco aquecido */
+    --card-foreground: 22 35% 15%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 285 22% 20%;
+    --popover: 35 22% 98%;
+    --popover-foreground: 22 35% 15%;
 
-    /* ── Primária: Mauve-rosê ── */
-    --primary: 315 28% 48%;
-    --primary-foreground: 0 0% 100%;
+    /* ── Primária: Marrom médio quente ── */
+    --primary: 22 40% 38%;
+    --primary-foreground: 35 22% 98%;
 
-    --secondary: 270 15% 92%;
-    --secondary-foreground: 285 22% 20%;
+    --secondary: 28 18% 88%;
+    --secondary-foreground: 22 35% 15%;
 
-    --muted: 310 12% 93%;
-    --muted-foreground: 285 15% 52%;
+    --muted: 28 14% 90%;
+    --muted-foreground: 22 20% 48%;
 
-    --accent: 330 20% 90%;
-    --accent-foreground: 285 22% 20%;
+    --accent: 28 22% 86%;
+    --accent-foreground: 22 35% 15%;
 
-    --destructive: 0 55% 50%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 0 55% 45%;
+    --destructive-foreground: 35 22% 98%;
 
-    --border: 310 16% 88%;
-    --input:  310 16% 88%;
-    --ring:   315 28% 48%;
+    --border: 25 18% 82%;
+    --input:  25 18% 82%;
+    --ring:   22 40% 38%;
 
     --radius: 2px;
 
     /* ── Tokens de marca ── */
-    --mauve:      315 28% 48%;   /* Mauve-rosê — primário */
-    --mauve-soft: 315 22% 68%;   /* Mauve suave */
-    --mauve-pale: 315 18% 90%;   /* Mauve palido — fundos */
-    --lavender:   270 20% 85%;   /* Lavanda */
-    --blush:      330 25% 91%;   /* Blush */
-    --gold:       38 48% 62%;    /* Champagne dourado */
-    --plum:       285 28% 22%;   /* Ameixa — texto forte */
-    --ink:        285 30% 15%;   /* Quase-preto ameixa */
+    --mauve:      22 40% 38%;   /* Marrom espresso — primário */
+    --mauve-soft: 22 30% 55%;   /* Caramelo médio */
+    --mauve-pale: 25 25% 88%;   /* Nude pálido — fundos */
+    --gold:       32 45% 55%;   /* Caramelo dourado — destaques */
+    --plum:       22 38% 18%;   /* Espresso profundo */
+    --ink:        20 40% 12%;   /* Quase-preto nude */
 
-    /* ── Sombras pastel ── */
-    --shadow-soft:    0 4px 20px rgba(160, 80, 120, 0.06);
-    --shadow-elegant: 0 12px 48px rgba(140, 60, 100, 0.10);
-    --shadow-mauve:   0 8px 32px rgba(180, 100, 140, 0.18);
+    /* ── Sombras com tom quente ── */
+    --shadow-soft:    0 4px 20px rgba(100, 60, 20, 0.07);
+    --shadow-elegant: 0 12px 48px rgba(80, 40, 10, 0.11);
+    --shadow-mauve:   0 8px 32px rgba(120, 70, 30, 0.18);
 
     /* ── Easing ── */
     --ease-luxe: cubic-bezier(0.16, 1, 0.3, 1);
@@ -79,16 +77,16 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Raleway', sans-serif;
     font-weight: 300;
-    letter-spacing: -0.01em;
-    line-height: 1.1;
+    letter-spacing: 0.01em;
+    line-height: 1.08;
   }
 }
 
 @layer utilities {
   /* ── Tipografia ── */
-  .font-serif-display { font-family: 'Cormorant Garamond', serif; }
+  .font-serif-display { font-family: 'Raleway', sans-serif; }
   .font-sans-luxe     { font-family: 'DM Sans', sans-serif; }
   .tracking-luxe      { letter-spacing: 0.28em; }
   .tracking-refined   { letter-spacing: 0.15em; }
@@ -106,18 +104,18 @@
   .shadow-elegant { box-shadow: var(--shadow-elegant); }
   .shadow-mauve   { box-shadow: var(--shadow-mauve); }
 
-  /* ── Pastel pill badge ── */
+  /* ── Pill badge nude ── */
   .badge-pastel {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
     padding: 0.375rem 1.125rem;
     background: hsl(var(--mauve-pale));
-    border: 1px solid hsl(var(--mauve) / 0.2);
+    border: 1px solid hsl(var(--mauve) / 0.18);
     border-radius: 999px;
   }
 
-  /* ── Linha decorativa mauve ── */
+  /* ── Linha decorativa marrom ── */
   .mauve-divider {
     display: inline-flex;
     align-items: center;
@@ -127,7 +125,7 @@
   .mauve-divider::after {
     content: '';
     width: 2rem; height: 1px;
-    background: hsl(var(--mauve) / 0.4);
+    background: hsl(var(--mauve) / 0.35);
   }
 
   /* ── Animações ── */
