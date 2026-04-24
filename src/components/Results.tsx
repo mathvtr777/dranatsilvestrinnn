@@ -39,7 +39,17 @@ const Results = () => {
             {results.map((r, i) => (
               <Reveal key={i} delay={i * 80} variant="up">
                 <button onClick={() => setOpen(i)} className="group block w-full text-left outline-none">
-                  <div className="relative overflow-hidden aspect-[3/4] bg-muted shadow-soft hover-lift" style={{ borderRadius: "4px" }}>
+                  {/* Mobile: mostra imagem completa sem cortar */}
+                  <div className="sm:hidden relative overflow-hidden bg-muted shadow-soft" style={{ borderRadius: "4px" }}>
+                    <img src={r.img} alt={r.title} loading="lazy"
+                      className="w-full h-auto object-contain" />
+                    <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-foreground/50 to-transparent">
+                      <div className="font-serif-display text-lg text-white font-light">{r.title}</div>
+                      {r.caption && <div className="text-[9px] tracking-luxe uppercase text-white/70 mt-0.5">{r.caption}</div>}
+                    </div>
+                  </div>
+                  {/* Desktop: grid uniforme com aspect fixo */}
+                  <div className="hidden sm:block relative overflow-hidden aspect-[3/4] bg-muted shadow-soft hover-lift" style={{ borderRadius: "4px" }}>
                     <img src={r.img} alt={r.title} loading="lazy" width={800} height={1000}
                       className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
                     <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
