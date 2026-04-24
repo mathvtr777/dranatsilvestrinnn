@@ -16,11 +16,11 @@ const Index = () => (
     <Navbar />
     <Hero />
     <EliteProtocol />
+    <Results />
     <Authority />
     <Procedures />
     <Differentials />
     <QualityVideoSection />
-    <Results />
     <Testimonials />
     <Experience />
     <CTA />
