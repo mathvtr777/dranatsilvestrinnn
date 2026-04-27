@@ -13,12 +13,10 @@ const QualityVideoSection = () => {
   const heroY = useTransform(scrollYProgress, [0, 0.22], [0, -60]);
   const aboutOpacity = useTransform(scrollYProgress, [0.38, 0.52], [0, 1]);
   const aboutY = useTransform(scrollYProgress, [0.38, 0.52], [40, 0]);
-  const containerOpacity = useTransform(scrollYProgress, [0.82, 1], [1, 0]);
 
   return (
-    <div ref={containerRef} className="relative h-[250vh] bg-background">
-      <motion.div className="sticky top-0 w-full h-screen overflow-hidden flex items-center justify-center bg-background"
-        style={{ opacity: containerOpacity }}>
+    <div ref={containerRef} className="relative h-[220vh] bg-background">
+      <motion.div className="sticky top-0 w-full h-screen overflow-hidden flex items-center justify-center bg-background">
 
         {/* Texto de fundo */}
         <motion.div className="absolute inset-0 flex items-center justify-center px-6 pointer-events-none"
