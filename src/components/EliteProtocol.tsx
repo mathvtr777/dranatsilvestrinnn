@@ -1,58 +1,44 @@
 import Reveal from "./Reveal";
-import eliteImg from "@/assets/elite.jpeg";
 
 const EliteProtocol = () => (
-  <section className="relative overflow-hidden bg-background-alt">
-    <div className="grid lg:grid-cols-2 min-h-[85vh]">
-
-      {/* Imagem — mostra completa sempre */}
-      <Reveal variant="left" className="relative">
-        <div className="w-full">
-          {/* Mobile: imagem em aspect ratio natural (não corta) */}
-          <img
-            src={eliteImg}
-            alt="Protocolo Elite Prime — Dra. Natália Silvestrin"
-            className="w-full h-auto object-contain lg:hidden"
-            loading="eager"
-          />
-          {/* Desktop: cobre a altura do grid */}
-          <img
-            src={eliteImg}
-            alt="Protocolo Elite Prime — Dra. Natália Silvestrin"
-            className="hidden lg:block w-full h-full object-cover object-center absolute inset-0"
-            loading="eager"
-          />
-          {/* Fade lateral para direita (desktop) */}
-          <div className="absolute inset-y-0 right-0 w-40 hidden lg:block"
-            style={{ background: "linear-gradient(to right, transparent, hsl(var(--background-alt)))" }}
-          />
-        </div>
-      </Reveal>
-
-      {/* Conteúdo */}
-      <Reveal delay={120} variant="right">
-        <div className="flex flex-col justify-center px-8 md:px-16 py-12 lg:py-24 h-full">
-
-          <div className="badge-pastel self-start mb-6">
+  <section className="relative overflow-hidden bg-background-alt py-24 md:py-32">
+    <div className="container mx-auto px-4 relative z-10">
+      <div className="max-w-3xl mx-auto text-center flex flex-col items-center">
+        <Reveal variant="fade">
+          <div className="badge-pastel mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-mauve animate-pulse-soft" />
             <span className="text-[10px] tracking-luxe uppercase text-mauve font-medium">
               Protocolo Exclusivo
             </span>
           </div>
+        </Reveal>
 
+        <Reveal delay={100} variant="fade">
+          <h2 className="font-serif-display text-4xl md:text-5xl text-foreground font-light mb-6">
+            Protocolo Elite Prime
+          </h2>
+        </Reveal>
+
+        <Reveal delay={120} variant="fade">
           <div className="w-10 h-px bg-mauve/30 mb-8" />
+        </Reveal>
 
-          <p className="text-lg text-foreground/65 font-light leading-relaxed max-w-md italic font-serif-display">
+        <Reveal delay={140} variant="fade">
+          <p className="text-xl md:text-2xl text-foreground/65 font-light leading-relaxed max-w-2xl italic font-serif-display">
             "Excelência que você vê. Confiança que você sente."
           </p>
+        </Reveal>
 
-          <p className="mt-6 text-foreground/55 font-light leading-relaxed max-w-md">
+        <Reveal delay={160} variant="fade">
+          <p className="mt-6 text-foreground/55 font-light leading-relaxed max-w-2xl text-base md:text-lg">
             O Protocolo Elite Prime foi desenvolvido para oferecer uma experiência completa de harmonização
             com os mais altos padrões de técnica, cuidado e personalização. Um protocolo pensado para quem
             busca resultados reais com sofisticação.
           </p>
+        </Reveal>
 
-          <div className="mt-10 space-y-4">
+        <Reveal delay={180} variant="fade" className="w-full">
+          <div className="mt-10 max-w-xl mx-auto grid sm:grid-cols-2 gap-4 text-left border border-mauve/10 p-6 md:p-8 bg-card shadow-soft" style={{ borderRadius: "4px" }}>
             {[
               "Avaliação estética individualizada",
               "Combinação estratégica de procedimentos",
@@ -65,7 +51,9 @@ const EliteProtocol = () => (
               </div>
             ))}
           </div>
+        </Reveal>
 
+        <Reveal delay={200} variant="fade">
           <div className="mt-12">
             <a
               href="https://wa.me/5551952039994"
@@ -78,8 +66,8 @@ const EliteProtocol = () => (
               <span className="ml-3 transition-transform duration-500 group-hover:translate-x-1">→</span>
             </a>
           </div>
-        </div>
-      </Reveal>
+        </Reveal>
+      </div>
     </div>
   </section>
 );
